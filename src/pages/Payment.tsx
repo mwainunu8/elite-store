@@ -32,7 +32,7 @@ interface CreatedOrder {
   [key: string]: unknown;
 }
 
-const API_URL = "http://10.26.60.23:8080";
+const API_URL = "https://elite-store-k5l2.onrender.com";
 
 const Payment = () => {
   const location = useLocation();

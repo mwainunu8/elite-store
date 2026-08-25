@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Product } from "@/data/products";
 
-const API_URL = "http://10.26.60.23:8080";
+const API_URL = "https://elite-store-k5l2.onrender.com";
 
 export const useProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);

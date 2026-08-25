@@ -4,7 +4,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 
-const API_URL = "http://10.26.60.23:8080";
+const API_URL = "https://elite-store-k5l2.onrender.com";
 
 const AdminLogin = () => {
   const navigate = useNavigate();
