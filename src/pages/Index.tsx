@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Smartphone, Watch, Music, Shield, Truck, Headphones, Star } from 'lucide-react';
+import { ArrowRight, Smartphone, Watch, Music, Shield, Truck, Headphones, Star, Gamepad2, Glasses } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ProductCard from '@/components/products/ProductCard';
 import OrderForm from '@/components/order/OrderForm';
@@ -37,6 +37,22 @@ const { products, loading, error } = useProducts();
       count: products.filter(p => p.category === 'ipods').length,
       link: '/products?category=ipods',
       color: 'from-elite-gold to-elite-navy',
+    },
+    {
+      name: 'Gamepads',
+      icon: Gamepad2,
+      description: 'Premium gaming controllers for all platforms',
+      count: products.filter(p => p.category === 'gamepads').length,
+      link: '/products?category=gamepads',
+      color: 'from-purple-600 to-pink-600',
+    },
+    {
+      name: 'Smart Glasses',
+      icon: Glasses,
+      description: 'Next-gen AR and smart eyewear',
+      count: products.filter(p => p.category === 'smart-glasses').length,
+      link: '/products?category=smart-glasses',
+      color: 'from-blue-600 to-indigo-600',
     },
   ];
 
@@ -83,7 +99,7 @@ const { products, loading, error } = useProducts();
               <span className="block text-accent">at Your Fingertips</span>
             </h1>
             <p className="text-primary-foreground/80 text-lg md:text-xl mb-8 max-w-xl">
-              Discover our curated collection of mobile phones, smartwatches, and iPods. Quality guaranteed, delivered to your doorstep.
+              Discover our curated collection of mobile phones, smartwatches, gamepads, smart glasses, and iPods. Quality guaranteed, delivered to your doorstep.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/products">
@@ -117,7 +133,7 @@ const { products, loading, error } = useProducts();
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => (
               <Link
                 key={category.name}
