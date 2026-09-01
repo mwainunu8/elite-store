@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: 'phones' | 'watches' | 'ipods';
+  category: 'phones' | 'watches' | 'ipods' | 'gamepads' | 'smart-glasses';
   price: number;
   storage?: string;
   ram?: string;
@@ -84,11 +84,33 @@ export const products: Product[] = [
   { id: 'ipd-4', name: 'iPod Nano 16GB', brand: 'Apple', category: 'ipods', price: 180000, storage: '16GB', description: 'Compact design for workouts', image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400' },
   { id: 'ipd-5', name: 'iPod Shuffle 2GB', brand: 'Apple', category: 'ipods', price: 85000, storage: '2GB', description: 'Clip-on music companion', image: 'https://images.unsplash.com/photo-1494366874395-e5e128f9a64e?w=400' },
   { id: 'ipd-6', name: 'iPod Mini 4GB', brand: 'Apple', category: 'ipods', price: 120000, storage: '4GB', description: 'Vintage style for collectors', image: 'https://images.unsplash.com/photo-1589491106922-5f8f0b0c0a0f?w=400' },
+
+  // ============================================================
+  // GAMEPADS
+  // ============================================================
+  { id: 'gam-1', name: 'PlayStation DualSense Wireless Controller', brand: 'Sony', category: 'gamepads', price: 180000, description: 'Haptic feedback and adaptive triggers for PS5', image: 'https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400' },
+  { id: 'gam-2', name: 'Xbox Wireless Controller - Carbon Black', brand: 'Microsoft', category: 'gamepads', price: 150000, description: 'Ergonomic design with textured grip', image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400' },
+  { id: 'gam-3', name: 'Nintendo Switch Pro Controller', brand: 'Nintendo', category: 'gamepads', price: 170000, description: 'Premium wireless controller for Switch', image: 'https://images.unsplash.com/photo-1592155931584-901ac15763e3?w=400' },
+  { id: 'gam-4', name: 'Razer Kishi V2 Mobile Gamepad', brand: 'Razer', category: 'gamepads', price: 160000, description: 'Universal mobile gaming controller', image: 'https://images.unsplash.com/photo-1587202372775-e229f172b9d7?w=400' },
+  { id: 'gam-5', name: 'Xbox Elite Series 2 Controller', brand: 'Microsoft', category: 'gamepads', price: 320000, description: 'Pro-level customization with paddle controls', image: 'https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=400' },
+  { id: 'gam-6', name: 'DualSense Edge Wireless Controller', brand: 'Sony', category: 'gamepads', price: 350000, description: 'Premium PS5 controller with custom controls', image: 'https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400' },
+
+  // ============================================================
+  // SMART GLASSES
+  // ============================================================
+  { id: 'sgl-1', name: 'Ray-Ban Meta Smart Glasses', brand: 'Ray-Ban', category: 'smart-glasses', price: 580000, description: 'AI-powered smart glasses with camera and audio', image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400' },
+  { id: 'sgl-2', name: 'XREAL Air 2 AR Glasses', brand: 'XREAL', category: 'smart-glasses', price: 680000, description: 'Cinematic AR display for mobile devices', image: 'https://images.unsplash.com/photo-1591703501194-1367a4c2967e?w=400' },
+  { id: 'sgl-3', name: 'Bose Frames Tenor', brand: 'Bose', category: 'smart-glasses', price: 420000, description: 'Sunglasses with built-in Bose audio', image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400' },
+  { id: 'sgl-4', name: 'Lenovo Legion Glasses', brand: 'Lenovo', category: 'smart-glasses', price: 500000, description: 'Gaming AR glasses with micro-OLED display', image: 'https://images.unsplash.com/photo-1591703501194-1367a4c2967e?w=400' },
+  { id: 'sgl-5', name: 'Meta Quest 3 Mixed Reality Headset', brand: 'Meta', category: 'smart-glasses', price: 780000, description: 'Immersive mixed reality with color passthrough', image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=400' },
+  { id: 'sgl-6', name: 'HTC VIVE XR Elite', brand: 'HTC', category: 'smart-glasses', price: 850000, description: 'Premium XR headset with hand tracking', image: 'https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=400' },
 ];
 
 export const phoneBrands = ['Samsung', 'iPhone', 'Tecno', 'Oppo', 'Nokia', 'Vivo', 'Infinix'];
 export const watchBrands = ['Apple', 'Samsung', 'Garmin', 'Fitbit', 'Amazfit', 'Huawei'];
-export const categories = ['phones', 'watches', 'ipods'] as const;
+export const gamepadBrands = ['Sony', 'Microsoft', 'Nintendo', 'Razer'];
+export const smartGlassesBrands = ['Ray-Ban', 'XREAL', 'Bose', 'Lenovo', 'Meta', 'HTC'];
+export const categories = ['phones', 'watches', 'ipods', 'gamepads', 'smart-glasses'] as const;
 
 export const formatPrice = (price: number) => {
   return new Intl.NumberFormat('en-TZ', {

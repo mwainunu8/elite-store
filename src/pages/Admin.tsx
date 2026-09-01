@@ -1444,35 +1444,47 @@ const Admin = () => {
 
             {/* CATEGORY */}
 
-            <div>
+           {/* CATEGORY */}
 
-              <label className="block font-medium mb-2">
-                Category
-              </label>
+{/* CATEGORY */}
 
-              <select
-                value={category}
-                onChange={(e) =>
-                  setCategory(e.target.value)
-                }
-                className="w-full border rounded-lg px-4 py-3 bg-background"
-              >
+<div>
 
-                <option value="phones">
-                  Mobile Phones
-                </option>
+  <label className="block font-medium mb-2">
+    Category
+  </label>
 
-                <option value="watches">
-                  Smart Watches
-                </option>
+  <select
+    value={category}
+    onChange={(e) =>
+      setCategory(e.target.value)
+    }
+    className="w-full border rounded-lg px-4 py-3 bg-background"
+  >
 
-                <option value="ipods">
-                  iPods
-                </option>
+    <option value="phones">
+      Mobile Phones
+    </option>
 
-              </select>
+    <option value="watches">
+      Smart Watches
+    </option>
 
-            </div>
+    <option value="ipods">
+      iPods
+    </option>
+
+    <option value="gamepads">
+      Gamepads
+    </option>
+
+    <option value="smart-glasses">
+      Smart Glasses
+    </option>
+
+  </select>
+
+</div>
 
             {/* PRICE */}
 
